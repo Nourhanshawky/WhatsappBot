@@ -1,0 +1,9 @@
+node_modules/
+
+RemoteAuth/
+
+.wwebjs_auth/
+
+.wwebjs_cache/
+
+*.env
