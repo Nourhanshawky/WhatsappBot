@@ -1,7 +1,7 @@
 const dotenv = require("dotenv");
 dotenv.config();
 const express = require('express');
-const { Client, RemoteAuth } = require("whatsapp-web.js");
+const { Client, RemoteAuth, LocalAuth } = require("whatsapp-web.js");
 const qrcode = require("qrcode");
 const path = require("path");
 const mongoose = require("mongoose");
@@ -15,7 +15,7 @@ mongoose.connect(process.env.DATABASE_URI).then(() => {
   console.log("DB connected successfully");
   store = new MongoStore({ mongoose });
   client = new Client({
-    authStrategy: new RemoteAuth({
+    authStrategy: new LocalAuth({
       store: store,
       backupSyncIntervalMs: 60000,
     }),
