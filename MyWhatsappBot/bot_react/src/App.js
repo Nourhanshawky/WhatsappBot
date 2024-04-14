@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import io from 'socket.io-client';
 
-const socket = io('http://localhost:3001');
+const socket = io('https://my-whatsapp-bot-s5u5.onrender.com/');
 
 function App() {
   const [qrCode, setQrCode] = useState('');
