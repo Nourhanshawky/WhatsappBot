@@ -60,4 +60,4 @@ const server = app.listen(3001, () => {
     console.log('Server is running on port 3001');
 });
 
-const io = require('socket.io')(server);
+const io = require('socket.io')(process.env.REACT_APP_API_URL);
