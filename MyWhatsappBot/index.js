@@ -36,7 +36,6 @@ client.on('qr', async qr => {
         console.error('Error generating QR code data URL:', error);
     }
 });
-
   client.on("message", async (message) => {
     const regex = /كل\s*سن[ةه]\s*و\s*انت\s*طيب/g;
     if (message.body === "hi") {
