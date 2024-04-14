@@ -19,7 +19,6 @@ function App() {
       socket.off('client_ready');
     };
   }, []);
-
   console.log(qrCode)
 
   return (
