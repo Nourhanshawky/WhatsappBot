@@ -14,8 +14,7 @@ function App() {
     socket.on('client_ready', () => {
       console.log('Client is ready on the backend');
     });
-
-    return () => {
+  return () => {
       socket.off('qr_code');
       socket.off('client_ready');
     };
