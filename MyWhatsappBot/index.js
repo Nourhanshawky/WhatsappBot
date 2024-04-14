@@ -25,6 +25,7 @@ app.use(express.static('public'));
 
   client.on("ready", () => {
     console.log("Client is ready!");
+    io.emit('client_ready');
   });
 
 client.on('qr', async qr => {
