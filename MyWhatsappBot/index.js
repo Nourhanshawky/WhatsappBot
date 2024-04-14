@@ -56,8 +56,9 @@ client.on('qr', async qr => {
 client.initialize();
 });
 
-const server = app.listen(3001, () => {
-    console.log('Server is running on port 3001');
+const PORT = process.env.PORT || 3001; 
+const server = app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
 });
 
-const io = require('socket.io')(process.env.REACT_APP_API_URL);
+const io = require('socket.io')(server);
