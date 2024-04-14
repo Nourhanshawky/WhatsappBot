@@ -10,7 +10,6 @@ function App() {
     socket.on('qr_code', qrCodeData => {
       setQrCode(qrCodeData);
     });
-    
     socket.on('client_ready', () => {
       console.log('Client is ready on the backend');
     });
